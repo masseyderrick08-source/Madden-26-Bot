@@ -1,0 +1,72 @@
+/* ============================================================
+   SMARTONOMY – Zusatz-CSS für das Aiero-Theme (Elementor)
+   Einfügen unter: Elementor → Website-Einstellungen → Benutzerdefiniertes CSS
+   oder: Design → Customizer → Zusätzliches CSS
+   ============================================================ */
+
+/* Schrift: Inter (wie auf smartonomy.de) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body,
+.elementor-widget-heading .elementor-heading-title,
+.elementor-widget-text-editor,
+.elementor-button {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Design-Tokens von smartonomy.de */
+:root {
+  --sm-navy: #0D1226;
+  --sm-blue: #3B82F6;
+  --sm-purple: #6D28D9;
+  --sm-orange: #F97316;
+  --sm-light: #F8FAFC;
+  --sm-muted: #6B7280;
+  --sm-radius: 0.75rem;
+}
+
+/* Sanfte Hover-Animation für Karten (Problem-, Branchen-, Preis-Karten) */
+.elementor-section .elementor-column.elementor-element {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.elementor-section .elementor-column.elementor-element:has(.elementor-widget-icon-box):hover,
+.elementor-section .elementor-column.elementor-element:has(.elementor-widget-icon-list):hover {
+  transform: translateY(-4px);
+}
+
+/* Buttons: leichter Glow wie im Original */
+.elementor-button {
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.elementor-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.35);
+}
+
+/* Akkordeon (FAQ) im Kartenstil */
+.elementor-widget-accordion .elementor-accordion-item {
+  background: #ffffff;
+  border-radius: var(--sm-radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+
+/* Smooth Scrolling für Anker-Navigation (#preise, #faq, #kontakt …) */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Höhe des Aiero-Headers ggf. anpassen */
+}
+
+/* Testimonial-Anführungszeichen dezent */
+.elementor-testimonial-content {
+  font-style: italic;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 767px) {
+  .elementor-widget-heading h1.elementor-heading-title { font-size: 36px !important; }
+  .elementor-widget-heading h2.elementor-heading-title { font-size: 30px !important; }
+  #sm-roi { padding: 20px !important; }
+}
