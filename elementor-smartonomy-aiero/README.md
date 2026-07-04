@@ -7,8 +7,18 @@ optimiert für das WordPress-Theme **Aiero** (AI & Machine Learning Theme).
 
 | Datei | Zweck |
 |---|---|
-| `smartonomy-landing-elementor.json` | Elementor-Seiten-Template (kompletter One-Pager) |
+| `smartonomy-landing-elementor.json` | Elementor-Seiten-Template (kompletter One-Pager, ohne Bilder) |
+| `smartonomy-landing-elementor-mit-bildern.json` | Wie oben, aber inkl. Original-Bilder: Hero-Hintergrundbild mit Navy-Overlay und SMARTONOMY-Logo im Hero |
 | `smartonomy-custom.css` | Zusatz-CSS (Inter-Font, Hover-Effekte, FAQ-Kartenstil, Smooth Scrolling) |
+| `images/hero-bg.jpg` | Hero-Hintergrundbild (1600×1067) von smartonomy.de |
+| `images/smartonomy-logo.png` | SMARTONOMY-Logo (847×294, transparent) |
+| `images/favicon.png` | Favicon (identisch mit Logo) |
+
+**Hinweis zu den Bildern:** Die Bild-Variante der JSON referenziert die Bilder per
+URL direkt von `https://smartonomy.de`. Für den Produktivbetrieb die Dateien aus
+`images/` in die WordPress-Mediathek hochladen und in Elementor neu zuweisen
+(Hero-Sektion → Stil → Hintergrundbild sowie das Logo-Bild-Widget im Hero) —
+sonst bleiben es Hotlinks auf die alte Seite.
 
 ## Enthaltene Sektionen (in Reihenfolge)
 
