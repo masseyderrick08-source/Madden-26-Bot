@@ -9,6 +9,7 @@ optimiert für das WordPress-Theme **Aiero** (AI & Machine Learning Theme).
 |---|---|
 | `smartonomy-landing-elementor.json` | Elementor-Seiten-Template (kompletter One-Pager, ohne Bilder) |
 | `smartonomy-landing-elementor-mit-bildern.json` | Wie oben, aber inkl. Original-Bilder: Hero-Hintergrundbild mit Navy-Overlay und SMARTONOMY-Logo im Hero |
+| `smartonomy-landing-elementor-ewebot.json` | **Exakter Klon für das eWebot-Theme**: Original-Hero (helles Design, Bild rechts, weißes 105°-Verlaufs-Overlay, linksbündiger Text), Original-Buttons (`.hero-cta-primary`/`.hero-cta-ghost`), Trust-Badges als weiße Pills, Original-Markenverlauf `#2563EB → #7C3AED`, Karten-Rahmen/-Schatten — das komplette CSS ist als `<style>`-Block **in der JSON eingebettet**, es muss nichts separat eingefügt werden |
 | `smartonomy-custom.css` | Zusatz-CSS (Inter-Font, Hover-Effekte, FAQ-Kartenstil, Smooth Scrolling) |
 | `images/hero-bg.jpg` | Hero-Hintergrundbild (1600×1067) von smartonomy.de |
 | `images/smartonomy-logo.png` | SMARTONOMY-Logo (847×294, transparent) |
@@ -38,6 +39,21 @@ sonst bleiben es Hotlinks auf die alte Seite.
 Es werden **nur kostenlose Elementor-Widgets** verwendet (Heading, Text, Button,
 Icon-Box, Icon-Liste, Counter, Testimonial, Akkordeon, HTML) – **Elementor Pro ist
 nicht erforderlich**.
+
+## eWebot-Theme: Besonderheiten
+
+Die Datei `smartonomy-landing-elementor-ewebot.json` funktioniert identisch zur
+Aiero-Variante (eWebot nutzt ebenfalls Elementor). Unterschiede:
+
+- **CSS ist eingebettet:** Die erste (unsichtbare) Sektion enthält ein HTML-Widget
+  mit dem kompletten `<style>`-Block — Inter-Font, Button-Stile, Karten-Rahmen,
+  Pill-Badges, Markenverlauf. Schritt 3 (Zusatz-CSS) entfällt daher.
+- **Exakter Hero wie im Original:** helles Design, Hintergrundbild rechts sichtbar,
+  weißes Verlaufs-Overlay (105°), Text linksbündig, Logo oben links.
+- **eWebot-Einstellungen:** Unter Theme Options → General den Page Title Bar für
+  diese Seite deaktivieren und im eWebot-Header ein Menü mit den Anker-Links
+  anlegen (`#vorteile`, `#leistungen`, `#preise`, `#ablauf`, `#faq`, `#kontakt`).
+  Header-Button „Termin buchen" auf `#kontakt` in Orange `#F97316`.
 
 ## Import-Anleitung
 
